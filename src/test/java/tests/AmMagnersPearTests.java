@@ -77,7 +77,7 @@ class AmMagnersPearTests extends TestBase {
             $(".btn.btn-primary.btn-outlined.catalog-element-info__shops.js-product-detail-stores-link").shouldHave(text("В наличии")).click();
         });
         step("PREP: enter search street name and Enter", () -> {
-            $(".search__input.js-store-search-input").setValue("Чертановская").pressEnter();
+            $(".search__input.js-store-search-input").setValue(streetName).pressEnter();
             $("span.store-item__quantity").shouldHave(text("В наличии:"));
         });
     }
