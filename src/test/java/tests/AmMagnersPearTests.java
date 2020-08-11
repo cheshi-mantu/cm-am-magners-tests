@@ -12,15 +12,15 @@ import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Epic("Magners Pear availability test in AM")
-@Feature("Direct search from URL")
-@Story("Go to search URL and check the availability")
+@Feature("AM search and availability check")
+@Story("Check the availability of Magners Pear cider at AM site")
 @Tag("am_magners_tests")
 class AmMagnersPearTests extends TestBase {
     private String url;
     private Boolean isAvailable = false;
     @Test
     @AllureId("1028")
-    @DisplayName("Search and check availability")
+    @DisplayName("Simple search and check of the availability")
     @Description("1) build search string, \n 2) directly open search \n 3) check availability")
     void searchAndCheckGeneralAvailiability() {
         step("PREP: building the search string", () -> {
@@ -48,7 +48,7 @@ class AmMagnersPearTests extends TestBase {
     }
     @Test
     @AllureId("1027")
-    @DisplayName("Search and check availability at certain shop")
+    @DisplayName("Search and check availability at certain shop,")
     @Description("1) build search string, " +
             "2) directly open search " +
             "3) check availability" +
