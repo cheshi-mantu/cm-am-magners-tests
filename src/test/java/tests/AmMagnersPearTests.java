@@ -19,7 +19,7 @@ class AmMagnersPearTests extends TestBase {
     private String url;
     private Boolean isAvailable = false;
     @Test
-    @AllureId("1031")
+    @AllureId("1028")
     @DisplayName("Search and check availability")
     @Description("1) build search string, \n 2) directly open search \n 3) check availability")
     void searchAndCheckGeneralAvailiability() {
@@ -47,7 +47,7 @@ class AmMagnersPearTests extends TestBase {
         });
     }
     @Test
-    @AllureId("1032")
+    @AllureId("1027")
     @DisplayName("Search and check availability at certain shop")
     @Description("1) build search string, " +
             "2) directly open search " +
