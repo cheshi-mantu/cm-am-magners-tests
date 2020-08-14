@@ -1,11 +1,19 @@
 package tests;
 
+import com.codeborne.selenide.Browser;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideDriver;
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.WebDriver;
+
+import java.util.ArrayList;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 import static helpers.Environment.*;
 import static io.qameta.allure.Allure.step;
@@ -70,10 +78,16 @@ class AmMagnersPearTests extends TestBase {
             $(byText("Да, верно")).click();
         });
         step("CHECK: search item is on the page", () -> {
-            $("[data-name='Magners Pear']").exists();
+//            $("[data-name='Magners Pear']").exists();
+            $("[href='/catalog/sidr/magners_pear/']").should(exist);
         });
         step("PREP: go to the item's page ", () -> {
-            $(".catalog-list-item__title.js-product-detail-link").click();
+            $("[href='/catalog/sidr/magners_pear/']").click(); // seems to be opening 2nd window now
+        });
+        step("CHECK: if new tab is opened after click on an element on the page", () -> {
+            if (WebDriverRunner.getWebDriver().getWindowHandles().size() > 1) {
+                switchTo().window(1);
+            }
         });
         step("PREP: click availability button", () -> {
             $(".btn.btn-primary.btn-outlined.catalog-element-info__shops.js-product-detail-stores-link").shouldHave(text("В наличии")).click();
