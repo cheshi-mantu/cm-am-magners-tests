@@ -52,7 +52,6 @@ dependencies {
     testImplementation "org.aspectj:aspectjweaver:${orgAspectjVersion}"
     testImplementation "com.codeborne:selenide:${selenideVersion}"
     testImplementation "io.qameta.allure:allure-selenide:${allureVersion}"
-    testImplementation "io.qameta.allure:allure-rest-assured:${allureVersion}"
     testImplementation 'ch.qos.logback:logback-classic:1.2.3'
     testImplementation 'org.hamcrest:hamcrest-all:1.3'
     testImplementation "io.qameta.allure:allure-ee-junit-platform:3.158.0"
