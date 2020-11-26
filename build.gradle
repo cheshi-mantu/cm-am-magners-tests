@@ -32,6 +32,7 @@ ext {
     orgJsonVersion = "20201115"
     orgAspectjVersion = "1.9.6"
 }
+
 repositories {
     maven {url = "https://dl.bintray.com/qameta/maven-unstable/"}
     jcenter()
