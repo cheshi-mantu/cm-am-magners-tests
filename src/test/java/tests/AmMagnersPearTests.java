@@ -1,14 +1,8 @@
 package tests;
 
-import com.codeborne.selenide.Browser;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideDriver;
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.WebDriver;
-
-import java.util.ArrayList;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
